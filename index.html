@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Galaxy</title>
+    <link rel="icon" type="image/png" href="assets/images/quiz_logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+
+        <div class="header">
+            <img src="assets/images/quiz_logo.png" alt="Quiz Galaxy Logo" class="logo">
+            <h1>Quiz Galaxy</h1>
+        </div>
+
+        <div id="login-page" class="screen active">
+            <h2>Login to Your Galaxy</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <button type="submit">Login</button>
+            </form>
+            <button id="guest-login-btn">Continue as Guest</button>
+        </div>
+
+        <div id="home-page" class="screen">
+            <p id="welcome-message">Welcome, user!</p>
+            <button id="start-quiz-btn">Start Quiz</button>
+            <button id="user-history-btn">My History</button>
+            <button id="leaderboard-btn">Leaderboard</button>
+            <button id="logout-btn">Logout</button>
+        </div>
+
+        <div id="selection-page" class="screen">
+            <h2>Select Your Challenge</h2>
+            <div id="category-buttons" class="btn-container"></div>
+            <div class="difficulty-container">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button id="start-quiz-now-btn">Start Quiz</button>
+            </div>
+            <button id="back-to-home-btn">Back</button>
+        </div>
+
+        <div id="loading-page" class="screen">
+            <div class="loader"></div>
+            <p id="loading-text">Loading questions...</p>
+        </div>
+
+        <div id="quiz-page" class="screen">
+            <div class="timer">Time Left: <span id="time-left"></span>s</div>
+            <div class="question-container">
+                <h2 id="question-text">Question goes here</h2>
+                <div id="answer-buttons" class="btn-container"></div>
+            </div>
+            <div class="controls">
+                <span id="question-number"></span> / <span id="total-questions"></span>
+                <button id="cancel-quiz-btn" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <div id="explanation-page" class="screen">
+            <h3>Quiz Feedback</h3>
+            <div class="feedback-container">
+                <p>Your Answer: <span id="user-answer-display"></span></p>
+                <p>Correct Answer: <span id="correct-answer-display"></span></p>
+                <p id="explanation-text"></p>
+            </div>
+            <button id="next-question-btn">Next Question</button>
+        </div>
+
+        <div id="result-page" class="screen">
+            <h2>Quiz Complete!</h2>
+            <p>Your Score: <span id="final-score"></span> / <span id="final-total"></span></p>
+            <p id="score-message"></p>
+            <button id="play-again-btn">Play Again</button>
+            <button id="go-home-btn">Go Home</button>
+        </div>
+
+        <div id="user-history-page" class="screen">
+            <h2>My History</h2>
+            <ul id="history-list"></ul>
+            <button id="back-from-history-btn">Back</button>
+        </div>
+
+        <div id="leaderboard-page" class="screen">
+            <h2>Galaxy Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+            <button id="back-from-leaderboard-btn">Back</button>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
