@@ -1,4 +1,3 @@
-// DOM Element Selectors
 const loginPage = document.getElementById('login-page');
 const homePage = document.getElementById('home-page');
 const selectionPage = document.getElementById('selection-page');
@@ -45,7 +44,6 @@ const historyList = document.getElementById('history-list');
 const leaderboardList = document.getElementById('leaderboard-list');
 const loadingText = document.getElementById('loading-text');
 
-// Global State Variables
 let currentUser = null;
 let currentQuestionIndex = 0;
 let score = 0;
@@ -56,14 +54,12 @@ let selectedQuestions = [];
 let selectedCategoryName = '';
 let selectedDifficulty = '';
 
-// API Categories
 const API_CATEGORIES = {
     'General Knowledge': 9, 'Science & Nature': 17, 'Science: Computers': 18,
     'Sports': 21, 'Mythology': 20, 'History': 23, 'Geography': 22,
     'Politics': 24, 'Art': 25, 'Animals': 27, 'Vehicles': 28
 };
 
-// --- User & Navigation Logic ---
 function showPage(page) {
     const screens = [loginPage, homePage, selectionPage, quizPage, explanationPage, resultPage, userHistoryPage, leaderboardPage, loadingPage];
     screens.forEach(s => s.classList.remove('active'));
@@ -132,7 +128,6 @@ function displayLeaderboard() {
     });
 }
 
-// Event Listeners
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const username = document.getElementById('login-username').value;
@@ -183,7 +178,6 @@ startQuizNowBtn.addEventListener('click', () => {
     startQuiz(API_CATEGORIES[selectedCategoryName], selectedDifficulty);
 });
 
-// --- Quiz Logic ---
 async function startQuiz(categoryId, difficulty) {
     showPage(loadingPage);
     loadingText.textContent = "Loading questions...";
@@ -314,7 +308,6 @@ function getScoreMessage(userScore, totalQuestions) {
     return "🤔 You'll get there! Don't give up on your cosmic quest.";
 }
 
-// Initial Page Load
 document.addEventListener('DOMContentLoaded', () => {
     showPage(loginPage);
 });
