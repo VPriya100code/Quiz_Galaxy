@@ -1,4 +1,3 @@
-/* General Body & App Container Styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -26,7 +25,6 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-/* Header & Logo */
 .header {
     margin-bottom: 20px;
 }
@@ -45,7 +43,6 @@ h3 {
     font-weight: 700;
 }
 
-/* Screen Transitions */
 .screen {
     display: none;
     opacity: 0;
@@ -59,7 +56,6 @@ h3 {
     transform: translateY(0);
 }
 
-/* Form & Input Styling */
 form {
     display: flex;
     flex-direction: column;
@@ -83,7 +79,6 @@ input[type="text"]:focus {
     border-color: #7b9fe7;
 }
 
-/* Timer & Quiz Styling */
 .timer {
     font-size: 1.4em;
     font-weight: bold;
@@ -149,7 +144,6 @@ button:disabled {
     background-color: #c0392b;
 }
 
-/* Explanation Page */
 #explanation-page .feedback-container {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -180,7 +174,6 @@ button:disabled {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Leaderboard & History */
 #leaderboard-list,
 #history-list {
     list-style: none;
@@ -220,7 +213,6 @@ button:disabled {
     border: 1px solid #ccc;
 }
 
-/* Loading Screen Styling */
 #loading-page {
     display: flex;
     flex-direction: column;
